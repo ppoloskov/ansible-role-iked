@@ -1,0 +1,6 @@
+---
+
+- name: Restart iked
+  service:
+    name: iked
+    state: restarted

@@ -1,0 +1,5 @@
+- hosts: localhost
+  roles:
+    - ansible-role-iked
+  vars:
+    iked_config: ""

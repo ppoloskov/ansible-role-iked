@@ -1,0 +1,8 @@
+iked_user: iked
+iked_group: iked
+iked_log_dir: /var/log/iked
+iked_db_dir: "{{ __iked_db_dir }}"
+iked_service: iked
+iked_conf_dir: "{{ __iked_conf_dir }}"
+iked_conf_file: "{{ __iked_conf_dir }}/iked.conf"
+iked_flags: ""

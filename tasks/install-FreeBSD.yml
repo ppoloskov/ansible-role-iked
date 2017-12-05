@@ -1,0 +1,6 @@
+---
+
+- name: Install iked
+  pkgng:
+    name: iked
+    state: present
