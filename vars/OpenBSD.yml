@@ -1,0 +1,4 @@
+__iked_user: _iked
+__iked_group: _iked
+__iked_conf_dir: /etc/iked
+__iked_conf_file: /etc/iked.conf

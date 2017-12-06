@@ -2,4 +2,11 @@
   roles:
     - ansible-role-iked
   vars:
-    iked_config: ""
+    iked_flags: -v
+    iked_config: |
+      ikev2 "win7" esp \
+          from 0.0.0.0/0 to 172.16.2.0/24 \
+          peer 10.0.0.0/8 local 192.168.56.0/24 \
+          eap "mschap-v2" \
+          config address 172.16.2.1 \
+          tag "$name-$id"

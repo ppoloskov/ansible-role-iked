@@ -5,33 +5,15 @@
 
 - include: "install-{{ ansible_os_family }}.yml"
 
-- name: Create log directory
-  file:
-    path: "{{ iked_log_dir }}"
-    mode: 0755
-    owner: "{{ iked_user }}"
-    group: "{{ iked_group }}"
-    state: directory
-  notify: Restart iked
-
-- name: Create db directory
-  file:
-    path: "{{ iked_db_dir }}"
-    mode: 0755
-    owner: "{{ iked_user }}"
-    group: "{{ iked_group }}"
-    state: directory
-  notify: Restart iked
-
 - name: Create iked.conf
   template:
     src: iked.conf.j2
     dest: "{{ iked_conf_file }}"
-    validate: echo %s
+    mode: 0640
+    validate: iked -n -f %s
   notify: Restart iked
 
 - name: Start iked
   service:
     name: "{{ iked_service }}"
-    enabled: true
     state: started

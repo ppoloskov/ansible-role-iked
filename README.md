@@ -1,6 +1,6 @@
 # ansible-role-iked
 
-A brief description of the role goes here.
+Manage `iked(8)`, aka [OpenIKED](http://www.openiked.org/)
 
 # Requirements
 
@@ -8,9 +8,25 @@ None
 
 # Role Variables
 
-| variable | description | default |
+| Variable | Description | Default |
 |----------|-------------|---------|
+| `iked_user` | | `{{ __iked_user }}` |
+| `iked_group` | | `{{ __iked_group }}` |
+| `iked_service` | | `iked` |
+| `iked_conf_dir` | | `{{ __iked_conf_dir }}` |
+| `iked_conf_file` | | `{{ __iked_conf_file }}` |
+| `iked_flags` | | `""` |
+| `iked_config` | | `""` |
 
+
+## OpenBSD
+
+| Variable | Default |
+|----------|---------|
+| `__iked_user` | `_iked` |
+| `__iked_group` | `_iked` |
+| `__iked_conf_dir` | `/etc/iked` |
+| `__iked_conf_file` | `/etc/iked.conf` |
 
 # Dependencies
 
@@ -19,6 +35,18 @@ None
 # Example Playbook
 
 ```yaml
+- hosts: localhost
+  roles:
+    - ansible-role-iked
+  vars:
+    iked_flags: -v
+    iked_config: |
+      ikev2 "win7" esp \
+          from 0.0.0.0/0 to 172.16.2.0/24 \
+          peer 10.0.0.0/8 local 192.168.56.0/24 \
+          eap "mschap-v2" \
+          config address 172.16.2.1 \
+          tag "$name-$id"
 ```
 
 # License
