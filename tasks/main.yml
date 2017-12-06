@@ -10,7 +10,7 @@
     src: iked.conf.j2
     dest: "{{ iked_conf_file }}"
     mode: 0640
-    validate: iked -n -f %s
+    validate: 'sh -c "cat %s | iked -nf -"'
   notify: Restart iked
 
 - name: Start iked

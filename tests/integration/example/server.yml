@@ -9,4 +9,52 @@
 
   pre_tasks:
   roles:
-    - iked
+    - trombik.x509-certificate
+    - ansible-role-iked
+  vars:
+    iked_flags: -vvv
+    iked_config: |
+      me = "{{ ansible_em1.ipv4[0].address }}"
+      ikev2 "site_to_site" active esp \
+          from 0.0.0.0/0 to 172.16.2.0/24 \
+          local $me peer {{ project_peer }} \
+          srcid $me dstid {{ project_peer }} \
+          tag "$name-$id"
+    x509_certificate_debug_log: yes
+    x509_certificate:
+      - name: me
+        state: present
+        public:
+          path: /etc/iked/certs/{{ ansible_em1.ipv4[0].address }}.crt
+          key: "{{ project_my_public_key }}"
+        secret:
+          path: /etc/iked/private/local.key
+          key: "{{ project_my_secret_key }}"
+          mode: "0600"
+      - name: ca
+        state: present
+        public:
+          path: /etc/iked/ca/ca.crt
+          key: |
+            -----BEGIN CERTIFICATE-----
+            MIIDrDCCApSgAwIBAgIJAIHTGFIFevAXMA0GCSqGSIb3DQEBCwUAMIGCMQswCQYD
+            VQQGEwJUSDEQMA4GA1UECAwHQmFuZ2tvazEQMA4GA1UEBwwHQmFuZ2tvazEQMA4G
+            A1UECgwHT3BlbkJTRDENMAsGA1UECwwEaWtlZDEPMA0GA1UEAwwGVlBOIENBMR0w
+            GwYJKoZIhvcNAQkBFg5jYUBleGFtcGxlLm9yZzAeFw0xNzEyMDYwMzEyMzhaFw0x
+            ODEyMDYwMzEyMzhaMIGCMQswCQYDVQQGEwJUSDEQMA4GA1UECAwHQmFuZ2tvazEQ
+            MA4GA1UEBwwHQmFuZ2tvazEQMA4GA1UECgwHT3BlbkJTRDENMAsGA1UECwwEaWtl
+            ZDEPMA0GA1UEAwwGVlBOIENBMR0wGwYJKoZIhvcNAQkBFg5jYUBleGFtcGxlLm9y
+            ZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKRKAvGUFl0RmhRp7iqj
+            0mS2XHPRUyd/Uru95Q/Zs5VOauQdwtqrtY0aTeTDjhe2JHosMtS9PREB5zOIPAYh
+            rC3fYTcY9VKG192OYyaGsGEavZiE64t4qqH7DtvoXuMIPK0cVjJSWyBNZo0oqk2A
+            bRpXONrp1Mv22i/UEQze23eySQV3BbLfMXQL5Cglh4lDRlWndXIeIwElkx2xWai0
+            eTXkYv+nCg2EU2EMUnTWw1ReZDqGemySGbBAUcArrZl1JET4u+NPfJDHa430nbj9
+            RdJWFO6QWMqD/DcBAMi5ITM8WJ1vAZ0pFBhYaFuCahu0Frzob7pUd3jUQd2air0G
+            opkCAwEAAaMjMCEwEgYDVR0TAQH/BAgwBgEB/wIBATALBgNVHQ8EBAMCAYYwDQYJ
+            KoZIhvcNAQELBQADggEBAGQlrLcfEyM/5aHtCwJMYZYvNSImvr5nAc0jGSR6zTP6
+            QwEPm+66pUtcIAzH2xIJL8UXM3JsS5Ya/tWrEFhCxD7I8iCicknXat1Hs3tDyK0S
+            2HLX6UTwTiH3bcHVD+r9uDbMcH0pdqOTr9H8zWcM6JDe7GOaEZJW/iEe7bZnBbvg
+            uiMaOONTz+gFrKtJa770x2ZSvvnsCijtJgV27Jca8fVKNY4aFKC9xb44wTpvVo+r
+            nEjoWBD7ct8+/xQSsrrYOZBxDzMhTpN/WSR7RdOKlXfNytMNKMn17z9sMwwEC5Rl
+            gYJ7nGumkaTfhhol4tqVy43UlqFyoFoyxicDv7Yx3/U=
+            -----END CERTIFICATE-----

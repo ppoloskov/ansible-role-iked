@@ -1,0 +1,113 @@
+---
+project_peer: 192.168.21.202
+project_my_secret_key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIEowIBAAKCAQEAuzVK0f4s9PEio4RyqeJjWwyOQKmPQcxW7JXs2AB3KsXdoCSQ
+  /Ap+ZYq7Pjj8sEFW4HvfKJnr70x/ViKq2TJ5H7nkaaHqcoeRaMiEQKRqtL5zjSY6
+  OgdWUPEsc9cizOxH0PBwG1Mypss51+hj1wMZQx4EtjaIyFryKhGYNRauBTuYXv/k
+  7/Fis0uEkrqlZ098e0DPg26YH9b5rnaQ8F0WpPVLH/Wttun/DLNsIJ1BOhJERbJZ
+  6ixEJfsdunlqX6mDF39PDu7Y/NEkEAUZYIWwg4QEjzBNcYUOE520vmLVwMNpz9KE
+  lgpuT89kHemhmd7FOFKDYn13LMSQCZ7+mxLqpQIDAQABAoIBAArfN28mkbnP3zEb
+  2gTfruF0wzYiIr2xfkLTGiQZMtJ7FznbpcfdXCXNfr5IVPRvdvomd3lGJxuIl8SK
+  0t02Py6GfytbSeBI2zr4miWe5suEW/WQiMUh8/NTbj9z+QNpnWoW7IvJsyFYoA1X
+  46Ry+56YObHTTPJFxdaHmw1KOeT3zZ26VKJK32h2uISW6MferFbqVrPAvgfYhF3i
+  h39gIZnVqxfC0j5bOtVJokDt55lHvxZ6dquLHxP4TsHscRY3fl0+FyURGm7AK6M0
+  D2rQJlZaWkVjC2Jl7KK/09bAv5jEKLep4fxaCu7MGMG5MesGdJv0QEKlv6V+CZd4
+  XDczKAECgYEA3VfnP9TwTt0eMJ7x1+vVwW+MTD2kKJARbWnks42lDC31tIMNhSpw
+  W0yB0jzaw3SvaU1X1s0g0AmHGEIW5BlWiRf9Gj5pQ5D97b+BaNHTDCnYW5HwQ2FH
+  XDagmoNMR4reYJPe7OVEgveslIZynP1oX0wruqNX7XzQwy/CV3goEwECgYEA2IUm
+  NSOlnvrCUKK0ZbYqNm6rZA6J4O0YRCK+bxT9HuozUV8IClYHNsBL/6/SmUTTKJNb
+  G4d3tDS1fF/SHKD0XeZ03MH5+yGpWVU+O7tBKReSmLq046B/aF4Z2eObk5/IJeZa
+  hv5kTX2ZW1/o2Yxt0CtR87vq3YwOOoWEse2Nq6UCgYAOr1JMTdhTox/poeHxrVfV
+  KY1pUX2eo1BErg3aS79ze2kdvMQc3Z/urri+NgNdjFRG7DazrZBLvRYVae0S3Qt8
+  tPa50wIw1WHDcD0psyIJYI1WJeyGy+FsIMOu/J8G8BOo3KahmORevAfbIsBf4gAW
+  snsEOuoOe4VuLbD7FKG0AQKBgGp25jeg5JJMmPmPV4bf0NfdCRd08qUP0CvIrbzv
+  JBtsa3lqcgirDncEjRoXeUV2CyJbeqQJs3l/pXGXqDf9iMsXQ4U9OE8c2Smc+bHj
+  PIIZHjNNMx7uT1ehVbLG8TvgiEjigMb6FZXo2VyNx3AZVfHTK0PetfjkIibyejIH
+  Le8lAoGBAJor13C08TwssnMXEzH7bnMVPdbWhFHFcmBQdl8jXU/FPTr7Bu4FOhya
+  1HR0I7NqaUlTILBZ/EDEVrnDiQ5bMyN7y3QWLiIgIftYiXgpvpvM6r7tadt86cZD
+  G9C0biAgXKQ1lxDJ60aEN2YcvGffNjO08OHAneJDz3oRkcstw0OP
+  -----END RSA PRIVATE KEY-----
+
+project_my_public_key: |
+  Certificate:
+      Data:
+          Version: 3 (0x2)
+          Serial Number: 1 (0x1)
+      Signature Algorithm: sha256WithRSAEncryption
+          Issuer: C=TH, ST=Bangkok, L=Bangkok, O=OpenBSD, OU=iked, CN=VPN CA/emailAddress=ca@example.org
+          Validity
+              Not Before: Dec  6 03:13:53 2017 GMT
+              Not After : Dec  6 03:13:53 2018 GMT
+          Subject: C=TH, ST=Bangkok, L=Bangkok, O=OpenBSD, OU=iked, CN=192.168.21.201/emailAddress=server1@example.org
+          Subject Public Key Info:
+              Public Key Algorithm: rsaEncryption
+                  Public-Key: (2048 bit)
+                  Modulus:
+                      00:bb:35:4a:d1:fe:2c:f4:f1:22:a3:84:72:a9:e2:
+                      63:5b:0c:8e:40:a9:8f:41:cc:56:ec:95:ec:d8:00:
+                      77:2a:c5:dd:a0:24:90:fc:0a:7e:65:8a:bb:3e:38:
+                      fc:b0:41:56:e0:7b:df:28:99:eb:ef:4c:7f:56:22:
+                      aa:d9:32:79:1f:b9:e4:69:a1:ea:72:87:91:68:c8:
+                      84:40:a4:6a:b4:be:73:8d:26:3a:3a:07:56:50:f1:
+                      2c:73:d7:22:cc:ec:47:d0:f0:70:1b:53:32:a6:cb:
+                      39:d7:e8:63:d7:03:19:43:1e:04:b6:36:88:c8:5a:
+                      f2:2a:11:98:35:16:ae:05:3b:98:5e:ff:e4:ef:f1:
+                      62:b3:4b:84:92:ba:a5:67:4f:7c:7b:40:cf:83:6e:
+                      98:1f:d6:f9:ae:76:90:f0:5d:16:a4:f5:4b:1f:f5:
+                      ad:b6:e9:ff:0c:b3:6c:20:9d:41:3a:12:44:45:b2:
+                      59:ea:2c:44:25:fb:1d:ba:79:6a:5f:a9:83:17:7f:
+                      4f:0e:ee:d8:fc:d1:24:10:05:19:60:85:b0:83:84:
+                      04:8f:30:4d:71:85:0e:13:9d:b4:be:62:d5:c0:c3:
+                      69:cf:d2:84:96:0a:6e:4f:cf:64:1d:e9:a1:99:de:
+                      c5:38:52:83:62:7d:77:2c:c4:90:09:9e:fe:9b:12:
+                      ea:a5
+                  Exponent: 65537 (0x10001)
+          X509v3 extensions:
+              X509v3 Key Usage: 
+                  Digital Signature, Certificate Sign, CRL Sign
+              Netscape Cert Type: 
+                  SSL Client, SSL Server
+              X509v3 Subject Alternative Name: 
+                  IP Address:192.168.21.201
+              X509v3 Extended Key Usage: 
+                  TLS Web Server Authentication, TLS Web Client Authentication
+      Signature Algorithm: sha256WithRSAEncryption
+           8e:09:00:37:e0:90:40:aa:c5:73:f9:76:42:15:1f:88:2d:50:
+           6f:31:23:e4:8c:07:c7:8b:33:2d:95:c5:cf:b0:a4:b0:c4:b6:
+           de:e1:91:dd:76:98:6f:da:00:5d:7f:26:ee:5b:eb:b7:a1:f0:
+           99:1b:a0:7f:96:ca:d2:39:e8:38:fa:af:f2:dd:c4:ef:72:f2:
+           f7:1c:44:39:b5:fb:3a:56:e2:e4:d5:b2:46:ef:eb:67:02:a9:
+           02:d5:60:b4:c5:dc:50:67:05:bc:83:43:e4:45:42:ee:e6:9a:
+           2f:8c:c6:16:5d:9f:cd:33:dd:06:2c:a9:de:bf:b1:51:d4:31:
+           e2:00:ba:59:59:68:8c:7e:cf:c2:9b:e3:e6:58:6b:0e:4a:57:
+           eb:b3:df:54:6b:d9:04:7e:cd:b0:d7:98:c4:9c:d3:e1:94:f6:
+           36:52:6e:c8:bb:d6:2e:50:4e:86:a7:91:cf:fb:1d:20:a7:c3:
+           75:37:0d:8d:4d:b1:8b:d0:39:be:b1:28:36:a1:20:b5:08:4e:
+           1c:69:a7:30:34:94:c1:d4:67:ea:87:c0:27:c8:7d:3e:5a:96:
+           fd:e9:d2:ab:32:fe:24:a7:44:b2:99:c3:3a:54:35:e0:de:78:
+           c5:c6:0b:87:55:bd:33:92:0c:11:0c:4f:8c:dc:78:13:ed:07:
+           12:93:17:72
+  -----BEGIN CERTIFICATE-----
+  MIID4DCCAsigAwIBAgIBATANBgkqhkiG9w0BAQsFADCBgjELMAkGA1UEBhMCVEgx
+  EDAOBgNVBAgMB0Jhbmdrb2sxEDAOBgNVBAcMB0Jhbmdrb2sxEDAOBgNVBAoMB09w
+  ZW5CU0QxDTALBgNVBAsMBGlrZWQxDzANBgNVBAMMBlZQTiBDQTEdMBsGCSqGSIb3
+  DQEJARYOY2FAZXhhbXBsZS5vcmcwHhcNMTcxMjA2MDMxMzUzWhcNMTgxMjA2MDMx
+  MzUzWjCBjzELMAkGA1UEBhMCVEgxEDAOBgNVBAgMB0Jhbmdrb2sxEDAOBgNVBAcM
+  B0Jhbmdrb2sxEDAOBgNVBAoMB09wZW5CU0QxDTALBgNVBAsMBGlrZWQxFzAVBgNV
+  BAMMDjE5Mi4xNjguMjEuMjAxMSIwIAYJKoZIhvcNAQkBFhNzZXJ2ZXIxQGV4YW1w
+  bGUub3JnMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuzVK0f4s9PEi
+  o4RyqeJjWwyOQKmPQcxW7JXs2AB3KsXdoCSQ/Ap+ZYq7Pjj8sEFW4HvfKJnr70x/
+  ViKq2TJ5H7nkaaHqcoeRaMiEQKRqtL5zjSY6OgdWUPEsc9cizOxH0PBwG1Mypss5
+  1+hj1wMZQx4EtjaIyFryKhGYNRauBTuYXv/k7/Fis0uEkrqlZ098e0DPg26YH9b5
+  rnaQ8F0WpPVLH/Wttun/DLNsIJ1BOhJERbJZ6ixEJfsdunlqX6mDF39PDu7Y/NEk
+  EAUZYIWwg4QEjzBNcYUOE520vmLVwMNpz9KElgpuT89kHemhmd7FOFKDYn13LMSQ
+  CZ7+mxLqpQIDAQABo1IwUDALBgNVHQ8EBAMCAYYwEQYJYIZIAYb4QgEBBAQDAgbA
+  MA8GA1UdEQQIMAaHBMCoFckwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMC
+  MA0GCSqGSIb3DQEBCwUAA4IBAQCOCQA34JBAqsVz+XZCFR+ILVBvMSPkjAfHizMt
+  lcXPsKSwxLbe4ZHddphv2gBdfybuW+u3ofCZG6B/lsrSOeg4+q/y3cTvcvL3HEQ5
+  tfs6VuLk1bJG7+tnAqkC1WC0xdxQZwW8g0PkRULu5povjMYWXZ/NM90GLKnev7FR
+  1DHiALpZWWiMfs/Cm+PmWGsOSlfrs99Ua9kEfs2w15jEnNPhlPY2Um7Iu9YuUE6G
+  p5HP+x0gp8N1Nw2NTbGL0Dm+sSg2oSC1CE4caacwNJTB1Gfqh8AnyH0+Wpb96dKr
+  Mv4kp0SymcM6VDXg3njFxguHVb0zkgwRDE+M3HgT7QcSkxdy
+  -----END CERTIFICATE-----

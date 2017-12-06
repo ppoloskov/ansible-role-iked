@@ -6,9 +6,12 @@ require "tempfile"
 test_dir = Pathname.new(__FILE__).dirname
 role_dir = Pathname.new(test_dir).parent.parent.parent
 role_name = Pathname.new(role_dir).basename
-required_roles = %w[
-]
 
+def vagrant(cmd)
+  Bundler.with_clean_env do
+    sh "vagrant #{cmd}"
+  end
+end
 task default: %w[test]
 
 desc "run rspec"
@@ -21,7 +24,7 @@ end
 
 desc "destroy vagrant nodes"
 task :clean_vagrant do
-  sh "vagrant destroy -f"
+  vagrant "destroy -f"
 end
 
 desc "rm roles/*"
@@ -36,15 +39,15 @@ end
 
 desc "import required roles"
 task :prepare_roles do
-  sh "ansible-galaxy install -r requirements.yml -p roles"
+  if File.exist?("requirements.yml")
+    sh "ansible-galaxy install -r requirements.yml -p roles"
+  end
 end
 
-desc "clean up required roles"
+desc "clean up roles"
 task :clean_roles do
-  required_roles.each do |r|
-    Dir.chdir("roles") do
-      sh "rm -rf #{r}"
-    end
+  Dir.chdir("roles") do
+    sh "rm -rf *"
   end
 end
 
@@ -61,7 +64,7 @@ end
 
 desc "vagrant up"
 task :vagrant_up do
-  sh "vagrant up"
+  vagrant "up"
 end
 
 desc "do clean task even if it has been executed"

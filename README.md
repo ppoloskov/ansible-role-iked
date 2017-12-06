@@ -10,14 +10,13 @@ None
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `iked_user` | | `{{ __iked_user }}` |
-| `iked_group` | | `{{ __iked_group }}` |
-| `iked_service` | | `iked` |
-| `iked_conf_dir` | | `{{ __iked_conf_dir }}` |
-| `iked_conf_file` | | `{{ __iked_conf_file }}` |
-| `iked_flags` | | `""` |
-| `iked_config` | | `""` |
-
+| `iked_user` | User name of `iked(8)` | `{{ __iked_user }}` |
+| `iked_group` | Group name of `iked(8)` | `{{ __iked_group }}` |
+| `iked_service` | Service name of `iked(8)` | `iked` |
+| `iked_conf_dir` | Path to configuration directory | `{{ __iked_conf_dir }}` |
+| `iked_conf_file` | Path to `iked.conf(5)` | `{{ __iked_conf_file }}` |
+| `iked_flags` | Optional flags to `iked(8)` | `""` |
+| `iked_config` | Content of `iked.conf(5)` | `""` |
 
 ## OpenBSD
 
